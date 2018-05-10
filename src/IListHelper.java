@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public interface IListHelper {
     /**
-     * Returns an array of integers between from and to
+     * Returns an array of integers between from and to (including both from and to)
      *
      * @param from - Starting index
      * @param to - Ending index
