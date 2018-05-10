@@ -38,7 +38,12 @@ public class ListHelper implements IListHelper {
 
     @Override
     public ArrayList<Integer> add(ArrayList<Integer> listOne, ArrayList<Integer> listTwo) {
-        return null;
+        ArrayList<Integer> finalList = new ArrayList<>();
+
+        finalList.addAll(listOne);
+        finalList.addAll(listTwo);
+
+        return finalList;
     }
 
     @Override

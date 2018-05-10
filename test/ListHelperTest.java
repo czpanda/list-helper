@@ -87,4 +87,30 @@ public class ListHelperTest {
         assertFalse(listOne.contains(9));
         assertFalse(listOne.contains(11));
     }
+
+    @Test
+    public void testAdd() {
+        ArrayList<Integer> listOne = helper.range(0, 5);
+        ArrayList<Integer> listTwo = helper.range(10, 15);
+
+        ArrayList<Integer> finalList = helper.add(listOne, listTwo);
+
+        assertTrue(finalList.contains(0));
+        assertTrue(finalList.contains(1));
+        assertTrue(finalList.contains(2));
+        assertTrue(finalList.contains(3));
+        assertTrue(finalList.contains(4));
+        assertTrue(finalList.contains(5));
+        assertTrue(finalList.contains(10));
+        assertTrue(finalList.contains(11));
+        assertTrue(finalList.contains(12));
+        assertTrue(finalList.contains(13));
+        assertTrue(finalList.contains(14));
+        assertTrue(finalList.contains(15));
+
+        assertFalse(listOne.contains(-1));
+        assertFalse(listOne.contains(6));
+        assertFalse(listOne.contains(9));
+        assertFalse(listOne.contains(16));
+    }
 }
