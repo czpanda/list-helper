@@ -30,7 +30,10 @@ public class ListHelper implements IListHelper {
 
     @Override
     public ArrayList<Integer> multiply(ArrayList<Integer> list, int by) {
-        return null;
+        return list
+            .stream()
+            .map(i -> i * by)
+            .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
