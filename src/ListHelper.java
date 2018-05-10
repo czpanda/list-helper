@@ -14,7 +14,10 @@ public class ListHelper implements IListHelper {
 
     @Override
     public ArrayList<Integer> getEven(ArrayList<Integer> list) {
-        return null;
+        return list
+            .stream()
+            .filter(i -> i % 2 == 0)
+            .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
