@@ -4,6 +4,22 @@ import java.util.stream.IntStream;
 
 public class ListHelper implements IListHelper {
 
+    /**
+     * Returns a list containing first @amount of fibonacci numbers
+     * @param amount Amount of numbers left to add
+     * @param list List of fibonacci numbers
+     * @return List of fibonacci numbers
+     */
+    private ArrayList<Integer> fibonacci(int amount, ArrayList<Integer> list) {
+        if (amount == 0) {
+            return list;
+        }
+
+        list.add(list.get(list.size() - 1) + list.get(list.size() - 2));
+
+        return fibonacci(amount - 1, list);
+    }
+
     @Override
     public ArrayList<Integer> range(int from, int to) {
         return IntStream
@@ -56,16 +72,6 @@ public class ListHelper implements IListHelper {
     @Override
     public int average(ArrayList<Integer> list) {
         return this.sum(list) / list.size();
-    }
-
-    private ArrayList<Integer> fibonacci(int amount, ArrayList<Integer> list) {
-        if (amount == 0) {
-            return list;
-        }
-
-        list.add(list.get(list.size() - 1) + list.get(list.size() - 2));
-
-        return fibonacci(amount - 1, list);
     }
 
     @Override
