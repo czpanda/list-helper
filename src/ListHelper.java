@@ -58,9 +58,24 @@ public class ListHelper implements IListHelper {
         return this.sum(list) / list.size();
     }
 
+    private ArrayList<Integer> fibonacci(int amount, ArrayList<Integer> list) {
+        if (amount == 0) {
+            return list;
+        }
+
+        list.add(list.get(list.size() - 1) + list.get(list.size() - 2));
+
+        return fibonacci(amount - 1, list);
+    }
+
     @Override
     public ArrayList<Integer> fibonacci(int amount) {
-        return null;
+        ArrayList<Integer> list = new ArrayList<>();
+
+        list.add(0);
+        list.add(1);
+
+        return fibonacci(amount - 2, list);
     }
 
     @Override

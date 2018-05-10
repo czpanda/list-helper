@@ -127,4 +127,32 @@ public class ListHelperTest {
         assertTrue(helper.average(helper.range(15, 20)) == 17);
         assertTrue(helper.average(helper.range(70, 100)) == 85);
     }
+
+    @Test
+    public void testFibonacci() {
+        ArrayList<Integer> listOne = helper.fibonacci(5);
+        ArrayList<Integer> listTwo = helper.fibonacci(10);
+        ArrayList<Integer> listThree = helper.fibonacci(15);
+
+        assertTrue(listOne.contains(0));
+        assertTrue(listOne.contains(1));
+        assertTrue(listOne.contains(1));
+        assertTrue(listOne.contains(2));
+        assertTrue(listOne.contains(3));
+        assertTrue(listOne.size() == 5);
+
+        assertTrue(listTwo.contains(5));
+        assertTrue(listTwo.contains(8));
+        assertTrue(listTwo.contains(13));
+        assertTrue(listTwo.contains(21));
+        assertTrue(listTwo.contains(34));
+        assertTrue(listTwo.size() == 10);
+
+        assertTrue(listThree.contains(55));
+        assertTrue(listThree.contains(89));
+        assertTrue(listThree.contains(144));
+        assertTrue(listThree.contains(233));
+        assertTrue(listThree.contains(377));
+        assertTrue(listThree.size() == 15);
+    }
 }
