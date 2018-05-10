@@ -120,4 +120,11 @@ public class ListHelperTest {
         assertTrue(helper.sum(helper.range(10, 11)) == 21);
         assertTrue(helper.sum(helper.range(20, 25)) == 135);
     }
+
+    @Test
+    public void testAverage() {
+        assertTrue(helper.average(helper.range(0, 5)) == 2);
+        assertTrue(helper.average(helper.range(15, 20)) == 17);
+        assertTrue(helper.average(helper.range(70, 100)) == 85);
+    }
 }

@@ -55,7 +55,7 @@ public class ListHelper implements IListHelper {
 
     @Override
     public int average(ArrayList<Integer> list) {
-        return 0;
+        return this.sum(list) / list.size();
     }
 
     @Override
