@@ -83,14 +83,4 @@ public class ListHelper implements IListHelper {
 
         return fibonacci(amount - 2, list);
     }
-
-    @Override
-    public ArrayList<Integer> linear(double base, double multiplier) {
-        return null;
-    }
-
-    @Override
-    public ArrayList<Integer> exponential(double base, double exponent) {
-        return null;
-    }
 }

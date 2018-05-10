@@ -60,20 +60,4 @@ public interface IListHelper {
      * @return List of fibonacci numbers
      */
     ArrayList<Integer> fibonacci(int amount);
-
-    /**
-     * Creates a list of base number multiplied by multiplier from -100 to 100
-     * @param base Base number
-     * @param multiplier Multiplier number
-     * @return List of base numbers multiplied by multiplier
-     */
-    ArrayList<Integer> linear(double base, double multiplier);
-
-    /**
-     * Creates a list of base number raised to a power of exponent number
-     * @param base Base number
-     * @param exponent Exponent number
-     * @return List of base numbers raised to a power of exponent number
-     */
-    ArrayList<Integer> exponential(double base, double exponent);
 }
