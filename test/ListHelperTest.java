@@ -113,4 +113,11 @@ public class ListHelperTest {
         assertFalse(listOne.contains(9));
         assertFalse(listOne.contains(16));
     }
+
+    @Test
+    public void testSum() {
+        assertTrue(helper.sum(helper.range(0, 5)) == 15);
+        assertTrue(helper.sum(helper.range(10, 11)) == 21);
+        assertTrue(helper.sum(helper.range(20, 25)) == 135);
+    }
 }

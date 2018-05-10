@@ -48,7 +48,9 @@ public class ListHelper implements IListHelper {
 
     @Override
     public int sum(ArrayList<Integer> list) {
-        return 0;
+        return list
+            .stream()
+            .reduce(0, (acc, cur) -> acc + cur);
     }
 
     @Override
