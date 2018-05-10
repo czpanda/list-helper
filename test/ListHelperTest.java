@@ -47,4 +47,24 @@ public class ListHelperTest {
         assertFalse(listOne.contains(9));
         assertFalse(listOne.contains(11));
     }
+
+    @Test
+    public void testGetOdd() {
+        ArrayList<Integer> listOne = helper.getOdd(helper.range(0, 10));
+
+        assertTrue(listOne.contains(1));
+        assertTrue(listOne.contains(3));
+        assertTrue(listOne.contains(5));
+        assertTrue(listOne.contains(7));
+        assertTrue(listOne.contains(9));
+
+        assertFalse(listOne.contains(-1));
+        assertFalse(listOne.contains(0));
+        assertFalse(listOne.contains(2));
+        assertFalse(listOne.contains(4));
+        assertFalse(listOne.contains(6));
+        assertFalse(listOne.contains(8));
+        assertFalse(listOne.contains(10));
+        assertFalse(listOne.contains(11));
+    }
 }
