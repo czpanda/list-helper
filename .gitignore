@@ -26,3 +26,6 @@ hs_err_pid*
 # Idea
 .idea
 linear-list.iml
+
+# Mac specific
+.DS_Store
